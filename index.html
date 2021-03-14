@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snake Game</title>
+    <link href="Content/style.css" rel="stylesheet">
+
+    <script src="Content/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+
+</head>
+
+<div style="height: 100%; width: 100%;">
+    <label id="score" style="float: right; padding-right: 20px;">Score: 0</label>
+    <canvas id="snakeboard" width="400" height="400"></canvas>
+</div>
+
+<div id="myModal" class="modal animated fadeIn">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Game Over</h2>
+        </div>
+        <div class="modal-body">
+            <p class="modal_text"></p>
+            <btn id="restartBtn">Play again?</btn>
+        </div>
+    </div>
+
+</div>
+
+</html>

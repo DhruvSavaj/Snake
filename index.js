@@ -79,11 +79,10 @@ $(document).ready(function () {
     }
 
     function ClearBoard() {
-        //  Select the colour to fill the drawing
-        // linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71)
         var grd = snakeboard_ctx.createLinearGradient(0, 0, boardWidth / 2, 0);
-        grd.addColorStop(0, '#3A1C71');
-        grd.addColorStop(1, '#D76D77');
+
+        grd.addColorStop(0, '#071028');
+        grd.addColorStop(1, '#1f2937');
 
         snakeboard_ctx.fillStyle = grd;
         snakeboard_ctx.strokeStyle = board_border;

@@ -6,7 +6,7 @@
   --muted: #94a3b8;
   --glass: rgba(255, 255, 255, 0.04);
   --radius: 12px;
-  --max-board: 640px;
+  --max-board: 740px;
   --gap: 16px;
 }
 
@@ -74,7 +74,8 @@ body {
 }
 
 .board-wrap {
-  width: min(var(--max-board), 95vw);
+  /* use viewport-min to ensure a large square on tall/landscape devices */
+  width: min(var(--max-board), 92vmin);
   aspect-ratio: 1 / 1;
   background: var(--card);
   border-radius: 16px;
@@ -103,6 +104,15 @@ body {
   margin-top: 12px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.hint {
+  margin: 0;
+}
+
+.game-area {
+  width: 100%;
+  flex: 1;
 }
 
 .modal {
@@ -188,13 +198,4 @@ body {
     padding: 8px;
     border-radius: 12px;
   }
-}
-
-.hint {
-  margin: 0;
-}
-
-.game-area {
-  width: 100%;
-  flex: 1;
 }

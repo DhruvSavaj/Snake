@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="Content/style.css" rel="stylesheet">
-
     <script src="Content/jquery-3.6.0.min.js"></script>
-    <script src="index.js"></script>
-
 </head>
 
-<div style="height: 100%; width: 100%;">
-    <label id="score" style="float: right; padding-right: 20px;">Score: 0</label>
-    <canvas id="snakeboard" width="400" height="400"></canvas>
-</div>
+<body>
+    <div class="app">
+        <header class="topbar">
+            <div class="title-wrap">
+                <h1 class="title">Snake</h1>
+                <p class="subtitle">Classic game with a fresh look</p>
+            </div>
+            <div id="score" class="score">Score: 0</div>
+        </header>
 
-<div id="myModal" class="modal animated fadeIn">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Game Over</h2>
-        </div>
-        <div class="modal-body">
-            <p class="modal_text"></p>
-            <btn id="restartBtn">Play again?</btn>
+        <main class="game-area">
+            <div class="board-wrap">
+                <canvas id="snakeboard" width="400" height="400" aria-label="Snake game board"></canvas>
+            </div>
+        </main>
+
+        <footer class="controls">
+            <p class="hint">Use arrow keys to move. On mobile, rotate device to landscape for a larger play area.</p>
+        </footer>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Game Over</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal_text"></p>
+                <button id="restartBtn" class="btn-primary">Play again?</button>
+            </div>
         </div>
     </div>
 
-</div>
+    <script src="index.js"></script>
+</body>
 
 </html>

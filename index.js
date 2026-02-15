@@ -34,7 +34,7 @@ $(document).ready(function () {
     function Main() {
         if (HasGameEnded()) {
             $(".modal_text").html("Your score is " + score.toString());
-            $("#myModal").css("display", "block");
+            $("#myModal").addClass("show");
             return;
         }
         changing_direction = false;
@@ -154,11 +154,5 @@ $(document).ready(function () {
     $("#restartBtn").click(function () {
         window.location.reload();
     });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        pTag = document.querySelector("div");
-        newVal = document.createElement("p");
-        newVal.innerHTML = '';
-        pTag.appendChild(newVal);
-    });
 });
+

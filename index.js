@@ -2,23 +2,16 @@ const board_border = 'black';
 const snake_col = 'lightblue';
 const snake_border = 'darkblue';
 
-let snake = [
-    { x: 200, y: 200 },
-    { x: 190, y: 200 },
-    { x: 180, y: 200 },
-    { x: 170, y: 200 },
-    { x: 160, y: 200 }
-]
-
+let snake = [];
 let score = 0;
-// True if changing direction
-let changing_direction = false;
+let changing_direction = false; // True if changing direction
 // Horizontal velocity
 let food_x;
 let food_y;
 let dx = 10;
 // Vertical velocity
 let dy = 0;
+// board and food cell size
 let boardWidth = 0;
 let boardHeight = 0;
 let cellSize = 0;
@@ -64,7 +57,7 @@ $(document).ready(function () {
     function Main() {
         if (HasGameEnded()) {
             $(".modal_text").html("Your score is " + score.toString());
-            $("#myModal").addClass("show");
+            $("#gameOverModal").addClass("show");
             return;
         }
         changing_direction = false;
